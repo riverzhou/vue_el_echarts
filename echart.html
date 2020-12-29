@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <!-- 引入 echarts.js -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://echarts.apache.org/zh/css/main.css?_v_=5f726bc83d">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pace-progressbar@1.0.2/pace.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/element-ui@2.13.2/lib/theme-chalk/index.css">
+    <link rel="stylesheet" href="https://echarts.apache.org/next/examples/css/example-bundle.css?_v_=6ea15c49aa">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
+</head>
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <!--
+    <span id="toolbar"> </span>
+    <br/><br/>
+    <div id="main" style="width: 600px;height:400px;"> </div>
+    -->
+    
+    <div id="ec-example-main"></div>
+    
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://echarts.apache.org/zh/js/common.js?_v_=b5b8944fb9"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/element-ui@2.13.2/lib/index.js"></script>
+<!--
+<script src="https://echarts.apache.org/next/examples/js/example-bundle.js?_v_=9075ca2145"></script>
+-->
+<script src="example-river.js?_v_=125"></script>
+<script type="text/javascript">window.EC_WWW_CDN_PAY_ROOT = 'https://echarts.apache.org';</script>
+
+<!--
+<script type="text/javascript">window.globalArgsExtra = {
+    page: 'view',
+    locale: 'zh'
+};
+-->
+
+</script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>    
+    <script type="text/javascript">
+    
+        window.globalArgsExtra = {
+        page: 'editor',
+        locale: 'zh'
+        };
+        
+        echartsExample.init('#ec-example-main', window.globalArgsExtra);
+
+        // 基于准备好的dom，初始化echarts实例
+        // var myChart = echarts.init(document.getElementById('main'));
+
+        // 指定图表的配置项和数据
+        //var option = {
+        //    title: {
+        //        text: 'ECharts 入门示例'
+        //    },
+        //    tooltip: {},
+        //    legend: {
+        //        data:['销量']
+        //    },
+        //    xAxis: {
+        //        data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+        //    },
+        //    yAxis: {},
+        //    dataZoom: [{
+        //    type: "inside"
+        //    }],
+        //    series: [{
+        //        name: '销量',
+        //        type: 'bar',
+        //        data: [5, 20, 36, 10, 10, 20]
+        //    }]
+        //};
+        
+        //window.dataLayer = window.dataLayer || [];
+        //function gtag(){dataLayer.push(arguments);}
+        //gtag('js', new Date());
+        //gtag('config', 'UA-141228404-1');
+        
+        // 使用刚指定的配置项和数据显示图表。
+        // myChart.setOption(option);
+    </script>
+</body>
+</html>
