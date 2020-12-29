@@ -1256,7 +1256,7 @@ var echartsExample = function(t) {
 					}));
 					else if (c(i)) {
 						if (H.test(i)) {
-							var n = "Detected HTML in message '" + i + "' of keypath '" + r.join("") + "' at '" + e + "'. Consider component interpolation with '<i18n>' to avoid XSS. See https://bit.ly/2ZqJzkp";
+							var n = "Detected HTML in message '" + i + "' of keypath '" + r.join("") + "' at '" + e + "'. Consider component interpolation with '<i18n>' to avoid XSS. See http://bit.ly/2ZqJzkp";
 							"warn" === t ? o(n) : "error" === t &&
 							function(t, e) {
 								"undefined" != typeof console && (console.error("[vue-i18n] " + t), e && console.error(e.stack))
@@ -2271,13 +2271,13 @@ var echartsExample = function(t) {
 		var st, ct = ((st = document.createElement("canvas")).width = st.height = 1, !(!st.getContext || !st.getContext("2d")) && 0 === st.toDataURL("image/webp").indexOf("data:image/webp")),
 			dt = {
 				localEChartsMinJS: "http://localhost/echarts-next/dist/echarts.js",
-				echartsMinJS: "https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js",
-				echartsDir: "https://cdn.jsdelivr.net/npm/echarts@5",
-				echartsStatMinJS: "https://cdn.jsdelivr.net/npm/echarts-stat@latest/dist/ecStat.min.js",
-				echartsGLMinJS: "https://cdn.jsdelivr.net/npm/echarts-gl@2.0.0-rc.1/dist/echarts-gl.min.js",
-				datGUIMinJS: "https://cdn.jsdelivr.net/npm/dat.gui@0.6.5/build/dat.gui.min.js",
-				monacoDir: "https://cdn.jsdelivr.net/npm/monaco-editor@0.21.2/min/vs",
-				aceDir: "https://cdn.jsdelivr.net/npm/ace-builds@1.4.12/src-min-noconflict"
+				echartsMinJS: "http://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js",
+				echartsDir: "http://cdn.jsdelivr.net/npm/echarts@5",
+				echartsStatMinJS: "http://cdn.jsdelivr.net/npm/echarts-stat@latest/dist/ecStat.min.js",
+				echartsGLMinJS: "http://cdn.jsdelivr.net/npm/echarts-gl@2.0.0-rc.1/dist/echarts-gl.min.js",
+				datGUIMinJS: "http://cdn.jsdelivr.net/npm/dat.gui@0.6.5/build/dat.gui.min.js",
+				monacoDir: "http://cdn.jsdelivr.net/npm/monaco-editor@0.21.2/min/vs",
+				aceDir: "http://cdn.jsdelivr.net/npm/ace-builds@1.4.12/src-min-noconflict"
 			},
 			ut = {
 				cdnRoot: "",
@@ -4639,7 +4639,7 @@ option = {
 		function Wt() {
 			if ("undefined" == typeof echarts) {
 				var t = Bt && Bt.tags.indexOf("bmap") >= 0;
-				return t && (window.HOST_TYPE = "2", window.BMap_loadScriptTime = (new Date).getTime()), rt([dt.datGUIMinJS, "local" in lt ? dt.localEChartsMinJS : dt.echartsMinJS, dt.echartsDir + "/dist/extension/dataTool.js", "https://cdn.jsdelivr.net/npm/echarts@4.9.0/map/js/world.js", dt.echartsStatMinJS].concat($t(lt.gl ? [dt.echartsGLMinJS] : []), $t(t ? ["https://api.map.baidu.com/getscript?v=2.0&ak=KOmVjPVUAey1G2E8zNhPiuQ6QiEmAwZu&services=&t=20200327103013", dt.echartsDir + "/dist/extension/bmap.js"] : []))).then((function() {
+				return t && (window.HOST_TYPE = "2", window.BMap_loadScriptTime = (new Date).getTime()), rt([dt.datGUIMinJS, "local" in lt ? dt.localEChartsMinJS : dt.echartsMinJS, dt.echartsDir + "/dist/extension/dataTool.js", "http://cdn.jsdelivr.net/npm/echarts@4.9.0/map/js/world.js", dt.echartsStatMinJS].concat($t(lt.gl ? [dt.echartsGLMinJS] : []), $t(t ? ["http://api.map.baidu.com/getscript?v=2.0&ak=KOmVjPVUAey1G2E8zNhPiuQ6QiEmAwZu&services=&t=20200327103013", dt.echartsDir + "/dist/extension/bmap.js"] : []))).then((function() {
 					echarts.registerPreprocessor(Gt)
 				}))
 			}
@@ -4723,7 +4723,7 @@ option = {
 				},
 				downloadExample: function() {
 					var t, e, i;
-					t = '<!DOCTYPE html>\n<html style="height: 100%">\n    <head>\n        <meta charset="utf-8">\n    </head>\n    <body style="height: 100%; margin: 0">\n        <div id="container" style="height: 100%"></div>\n\n        <script type="text/javascript" src="'.concat(dt.echartsMinJS, '"><\/script>\n        <!-- Uncomment this line if you want to dataTool extension\n        <script type="text/javascript" src="').concat(dt.echartsDir, '/dist/extension/dataTool.min.js"><\/script>\n        -->\n        <!-- Uncomment this line if you want to use gl extension\n        <script type="text/javascript" src="').concat(dt.echartsGLMinJS, '"><\/script>\n        -->\n        <!-- Uncomment this line if you want to echarts-stat extension\n        <script type="text/javascript" src="').concat(dt.echartsStatMinJS, '"><\/script>\n        -->\n        <!-- Uncomment this line if you want to use map\n        <script type="text/javascript" src="').concat(dt.echartsDir, '/map/js/china.js"><\/script>\n        <script type="text/javascript" src="').concat(dt.echartsDir, '/map/js/world.js"><\/script>\n        -->\n        <!-- Uncomment these two lines if you want to use bmap extension\n        <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=<Your Key Here>"><\/script>\n        <script type="text/javascript" src="').concat(dt.echartsDir, '/dist/extension/bmap.min.js"><\/script>\n        -->\n\n        <script type="text/javascript">\nvar dom = document.getElementById("container");\nvar myChart = echarts.init(dom);\nvar app = {};\n\nvar option;\n\n').concat(jt, "\n\n").concat(ut.code, "\n\nif (option && typeof option === 'object') {\n    myChart.setOption(option);\n}\n\n        <\/script>\n    </body>\n</html>\n    "), e = new Blob([t], {
+					t = '<!DOCTYPE html>\n<html style="height: 100%">\n    <head>\n        <meta charset="utf-8">\n    </head>\n    <body style="height: 100%; margin: 0">\n        <div id="container" style="height: 100%"></div>\n\n        <script type="text/javascript" src="'.concat(dt.echartsMinJS, '"><\/script>\n        <!-- Uncomment this line if you want to dataTool extension\n        <script type="text/javascript" src="').concat(dt.echartsDir, '/dist/extension/dataTool.min.js"><\/script>\n        -->\n        <!-- Uncomment this line if you want to use gl extension\n        <script type="text/javascript" src="').concat(dt.echartsGLMinJS, '"><\/script>\n        -->\n        <!-- Uncomment this line if you want to echarts-stat extension\n        <script type="text/javascript" src="').concat(dt.echartsStatMinJS, '"><\/script>\n        -->\n        <!-- Uncomment this line if you want to use map\n        <script type="text/javascript" src="').concat(dt.echartsDir, '/map/js/china.js"><\/script>\n        <script type="text/javascript" src="').concat(dt.echartsDir, '/map/js/world.js"><\/script>\n        -->\n        <!-- Uncomment these two lines if you want to use bmap extension\n        <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=<Your Key Here>"><\/script>\n        <script type="text/javascript" src="').concat(dt.echartsDir, '/dist/extension/bmap.min.js"><\/script>\n        -->\n\n        <script type="text/javascript">\nvar dom = document.getElementById("container");\nvar myChart = echarts.init(dom);\nvar app = {};\n\nvar option;\n\n').concat(jt, "\n\n").concat(ut.code, "\n\nif (option && typeof option === 'object') {\n    myChart.setOption(option);\n}\n\n        <\/script>\n    </body>\n</html>\n    "), e = new Blob([t], {
 						type: "text/html;charset=UTF-8",
 						encoding: "UTF-8"
 					}), (i = document.createElement("a")).href = URL.createObjectURL(e), i.download = lt.c + ".html", i.click()
@@ -4756,7 +4756,7 @@ option = {
 					}), new Promise((function(t) {
 						window.require(["vs/editor/editor.main"], (function() {
 							fetch(ut.cdnRoot + "/types/echarts.d.ts", {
-								mode: "cors"
+								mode: "no-cors"
 							}).then((function(t) {
 								return t.text()
 							})).then((function(t) {
@@ -4798,8 +4798,7 @@ option = {
 							automaticLayout: !0
 						});
 					t._editor = i, t.initialCode && (ut.sourceCode = t.initialCode, ut.runCode = echartsExampleTransformTs(ut.sourceCode)), i.onDidChangeModelContent((function() {
-						ut.sourceCode = i.getValue(), ut.runCode = echartsExampleTransformTs(ut.sourceCode)}))
-/*
+						ut.sourceCode = i.getValue(), ut.runCode = echartsExampleTransformTs(ut.sourceCode)}));
 				i.setValue(`\
 option = {
     title: {
@@ -4822,7 +4821,6 @@ option = {
         data: [5, 20, 36, 10, 10, 20]
     }]
 };`);
-*/
 				}))
 			},
 			destroyed: function() {

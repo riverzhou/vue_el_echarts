@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <title>ECharts</title>
     <!-- 引入 echarts.js -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="https://echarts.apache.org/zh/css/main.css?_v_=5f726bc83d">
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pace-progressbar@1.0.2/pace.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/element-ui@2.13.2/lib/theme-chalk/index.css">
-    <link rel="stylesheet" href="https://echarts.apache.org/next/examples/css/example-bundle.css?_v_=6ea15c49aa">
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="http://echarts.apache.org/zh/css/main.css?_v_=5f726bc83d">
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/pace-progressbar@1.0.2/pace.min.js"></script>
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/element-ui@2.13.2/lib/theme-chalk/index.css">
+    <link rel="stylesheet" href="http://echarts.apache.org/next/examples/css/example-bundle.css?_v_=6ea15c49aa">
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
 </head>
 <body>
     <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
@@ -21,15 +21,15 @@
     
     <div id="ec-example-main"></div>
     
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="https://echarts.apache.org/zh/js/common.js?_v_=b5b8944fb9"></script>
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/element-ui@2.13.2/lib/index.js"></script>
+<script type="text/javascript" src="http://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://echarts.apache.org/zh/js/common.js?_v_=b5b8944fb9"></script>
+<script src="http://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js"></script>
+<script src="http://cdn.jsdelivr.net/npm/element-ui@2.13.2/lib/index.js"></script>
 <!--
-<script src="https://echarts.apache.org/next/examples/js/example-bundle.js?_v_=9075ca2145"></script>
+<script src="http://echarts.apache.org/next/examples/js/example-bundle.js?_v_=9075ca2145"></script>
 -->
-<script src="example-river.js?_v_=127"></script>
-<script type="text/javascript">window.EC_WWW_CDN_PAY_ROOT = 'https://echarts.apache.org';</script>
+<script src="example-river.js?_v_=132"></script>
+<script type="text/javascript">window.EC_WWW_CDN_PAY_ROOT = 'http://echarts.apache.org';</script>
 
 <!--
 <script type="text/javascript">window.globalArgsExtra = {
@@ -39,14 +39,17 @@
 -->
 
 </script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>    
+<script type="text/javascript" src="http://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>    
     <script type="text/javascript">
     
         window.globalArgsExtra = {
         page: 'editor',
         locale: 'zh'
         };
-        
+
+        window.globalArgsExtra.version = '1607268036261';
+        window.globalArgsExtra.cdnRoot = EC_WWW_CDN_PAY_ROOT + '/next/examples';
+
         echartsExample.init('#ec-example-main', window.globalArgsExtra);
 
         // 基于准备好的dom，初始化echarts实例
