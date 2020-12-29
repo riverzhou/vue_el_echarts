@@ -2286,7 +2286,8 @@ var echartsExample = function(t) {
 				darkMode: "dark" === lt.theme,
 				enableDecal: "decal" in lt,
 				renderer: lt.renderer || "canvas",
-				typeCheck: "monaco" === lt.editor,
+				//typeCheck: "monaco" === lt.editor,
+				typeCheck: true,
 				useDirtyRect: "useDirtyRect" in lt,
 				code: "",
 				runCode: "",
@@ -4797,7 +4798,8 @@ option = {
 							automaticLayout: !0
 						});
 					t._editor = i, t.initialCode && (ut.sourceCode = t.initialCode, ut.runCode = echartsExampleTransformTs(ut.sourceCode)), i.onDidChangeModelContent((function() {
-						ut.sourceCode = i.getValue(), ut.runCode = echartsExampleTransformTs(ut.sourceCode)}));
+						ut.sourceCode = i.getValue(), ut.runCode = echartsExampleTransformTs(ut.sourceCode)}))
+/*
 				i.setValue(`\
 option = {
     title: {
@@ -4820,6 +4822,7 @@ option = {
         data: [5, 20, 36, 10, 10, 20]
     }]
 };`);
+*/
 				}))
 			},
 			destroyed: function() {
